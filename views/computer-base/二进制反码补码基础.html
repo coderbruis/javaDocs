@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>二进制反码补码基础 | JavaDocs</title>
+    <meta name="description" content="温故而知新，可以为师矣">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/javaDocs/icon.jpg">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <script language="javascript" type="text/javascript" src="/javaDocs/js/jquery.min-1.7.2.js"></script>
+  <script language="javascript" type="text/javascript" src="/javaDocs/js/MouseClickEffect.js"></script>
+  <script src="/javaDocs/js/jquery.slim.min-3.3.1.js"></script>
+  <script src="/javaDocs/js/jquery.fancybox.min-3.5.2.js"></script>
+  <link rel="stylesheet" type="text/css" href="/javaDocs/css/jquery.fancybox.min-3.5.2.css">
+    
+    <link rel="preload" href="/javaDocs/assets/css/0.styles.1cdf42f6.css" as="style"><link rel="preload" href="/javaDocs/assets/js/app.87118588.js" as="script"><link rel="preload" href="/javaDocs/assets/js/5.ce38acb5.js" as="script"><link rel="preload" href="/javaDocs/assets/js/1.e99f6fa9.js" as="script"><link rel="preload" href="/javaDocs/assets/js/2.7e97c293.js" as="script"><link rel="preload" href="/javaDocs/assets/js/26.247fea4c.js" as="script"><link rel="preload" href="/javaDocs/assets/js/19.93b2bff0.js" as="script"><link rel="prefetch" href="/javaDocs/assets/js/10.5bd24191.js"><link rel="prefetch" href="/javaDocs/assets/js/11.b438e7ea.js"><link rel="prefetch" href="/javaDocs/assets/js/12.a5711bc4.js"><link rel="prefetch" href="/javaDocs/assets/js/13.ff549af2.js"><link rel="prefetch" href="/javaDocs/assets/js/14.7e229e13.js"><link rel="prefetch" href="/javaDocs/assets/js/15.94d47c82.js"><link rel="prefetch" href="/javaDocs/assets/js/16.58b4a22a.js"><link rel="prefetch" href="/javaDocs/assets/js/17.1911ccb1.js"><link rel="prefetch" href="/javaDocs/assets/js/18.07afe61e.js"><link rel="prefetch" href="/javaDocs/assets/js/20.8d73195b.js"><link rel="prefetch" href="/javaDocs/assets/js/21.12a421d4.js"><link rel="prefetch" href="/javaDocs/assets/js/22.eba2dbd2.js"><link rel="prefetch" href="/javaDocs/assets/js/23.a8195967.js"><link rel="prefetch" href="/javaDocs/assets/js/24.62c9750b.js"><link rel="prefetch" href="/javaDocs/assets/js/25.6d6da24b.js"><link rel="prefetch" href="/javaDocs/assets/js/27.f7c74453.js"><link rel="prefetch" href="/javaDocs/assets/js/28.1edcee97.js"><link rel="prefetch" href="/javaDocs/assets/js/29.3d84f6b2.js"><link rel="prefetch" href="/javaDocs/assets/js/30.7c9b4d63.js"><link rel="prefetch" href="/javaDocs/assets/js/31.b85d7cf1.js"><link rel="prefetch" href="/javaDocs/assets/js/32.9cc9149f.js"><link rel="prefetch" href="/javaDocs/assets/js/33.1742125d.js"><link rel="prefetch" href="/javaDocs/assets/js/34.f1b396d8.js"><link rel="prefetch" href="/javaDocs/assets/js/35.b5011383.js"><link rel="prefetch" href="/javaDocs/assets/js/36.5659853c.js"><link rel="prefetch" href="/javaDocs/assets/js/37.37b471a6.js"><link rel="prefetch" href="/javaDocs/assets/js/38.b80df1ae.js"><link rel="prefetch" href="/javaDocs/assets/js/39.476f9ba3.js"><link rel="prefetch" href="/javaDocs/assets/js/40.3cf1ea8d.js"><link rel="prefetch" href="/javaDocs/assets/js/41.96bbf011.js"><link rel="prefetch" href="/javaDocs/assets/js/42.c98f928b.js"><link rel="prefetch" href="/javaDocs/assets/js/43.3f02d5f9.js"><link rel="prefetch" href="/javaDocs/assets/js/44.7f4c7b82.js"><link rel="prefetch" href="/javaDocs/assets/js/45.e39af5a1.js"><link rel="prefetch" href="/javaDocs/assets/js/46.08bdfb02.js"><link rel="prefetch" href="/javaDocs/assets/js/47.99b5f678.js"><link rel="prefetch" href="/javaDocs/assets/js/48.29643629.js"><link rel="prefetch" href="/javaDocs/assets/js/49.ad7ce5f7.js"><link rel="prefetch" href="/javaDocs/assets/js/50.2e241c31.js"><link rel="prefetch" href="/javaDocs/assets/js/51.bf94dc6c.js"><link rel="prefetch" href="/javaDocs/assets/js/52.e8cd3874.js"><link rel="prefetch" href="/javaDocs/assets/js/53.8d15fd20.js"><link rel="prefetch" href="/javaDocs/assets/js/54.eac32e6d.js"><link rel="prefetch" href="/javaDocs/assets/js/55.379c098a.js"><link rel="prefetch" href="/javaDocs/assets/js/56.0919815a.js"><link rel="prefetch" href="/javaDocs/assets/js/57.d1c2a7c6.js"><link rel="prefetch" href="/javaDocs/assets/js/58.c3cc39f0.js"><link rel="prefetch" href="/javaDocs/assets/js/59.163edd61.js"><link rel="prefetch" href="/javaDocs/assets/js/6.a83a4a45.js"><link rel="prefetch" href="/javaDocs/assets/js/60.bdf5ac86.js"><link rel="prefetch" href="/javaDocs/assets/js/61.963e5fe8.js"><link rel="prefetch" href="/javaDocs/assets/js/62.b5a91d7c.js"><link rel="prefetch" href="/javaDocs/assets/js/63.b535fb1e.js"><link rel="prefetch" href="/javaDocs/assets/js/64.387b922b.js"><link rel="prefetch" href="/javaDocs/assets/js/65.150ff8c1.js"><link rel="prefetch" href="/javaDocs/assets/js/66.6011ebf9.js"><link rel="prefetch" href="/javaDocs/assets/js/67.75dbc87b.js"><link rel="prefetch" href="/javaDocs/assets/js/68.8cecf1f1.js"><link rel="prefetch" href="/javaDocs/assets/js/69.9909cbe5.js"><link rel="prefetch" href="/javaDocs/assets/js/7.41f894ca.js"><link rel="prefetch" href="/javaDocs/assets/js/70.0c1ac7fd.js"><link rel="prefetch" href="/javaDocs/assets/js/71.15b72a68.js"><link rel="prefetch" href="/javaDocs/assets/js/72.bfffca59.js"><link rel="prefetch" href="/javaDocs/assets/js/73.d66defc8.js"><link rel="prefetch" href="/javaDocs/assets/js/74.aec69e06.js"><link rel="prefetch" href="/javaDocs/assets/js/75.a510a279.js"><link rel="prefetch" href="/javaDocs/assets/js/76.03c90f06.js"><link rel="prefetch" href="/javaDocs/assets/js/77.b442b520.js"><link rel="prefetch" href="/javaDocs/assets/js/78.89836da9.js"><link rel="prefetch" href="/javaDocs/assets/js/79.ea2f41ed.js"><link rel="prefetch" href="/javaDocs/assets/js/8.50a3a717.js"><link rel="prefetch" href="/javaDocs/assets/js/80.3dbf5119.js"><link rel="prefetch" href="/javaDocs/assets/js/81.d703076c.js"><link rel="prefetch" href="/javaDocs/assets/js/82.98fd6152.js"><link rel="prefetch" href="/javaDocs/assets/js/83.b0a671cf.js"><link rel="prefetch" href="/javaDocs/assets/js/84.6a966104.js"><link rel="prefetch" href="/javaDocs/assets/js/85.d522eec5.js"><link rel="prefetch" href="/javaDocs/assets/js/86.89a15dbe.js"><link rel="prefetch" href="/javaDocs/assets/js/87.9223ad5c.js"><link rel="prefetch" href="/javaDocs/assets/js/9.74ebf4ef.js"><link rel="prefetch" href="/javaDocs/assets/js/vendors~flowchart.3aeee9ac.js">
+    <link rel="stylesheet" href="/javaDocs/assets/css/0.styles.1cdf42f6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-584a622c><div data-v-584a622c><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-584a622c data-v-584a622c><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-73c95a87 data-v-584a622c data-v-584a622c><h3 class="title" style="display:none;" data-v-73c95a87 data-v-73c95a87>JavaDocs</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-73c95a87 data-v-73c95a87><input type="password" value="" data-v-73c95a87> <span data-v-73c95a87>Konck! Knock!</span> <button data-v-73c95a87>OK</button></label> <div class="footer" style="display:none;" data-v-73c95a87 data-v-73c95a87><span data-v-73c95a87><i class="iconfont reco-theme" data-v-73c95a87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-73c95a87>vuePress-theme-reco</a></span> <span data-v-73c95a87><i class="iconfont reco-copyright" data-v-73c95a87></i> <a data-v-73c95a87><span data-v-73c95a87>CoderBruis</span>
+            
+          <span data-v-73c95a87>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-584a622c><header class="navbar" data-v-584a622c><div title="导航" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/javaDocs/" class="home-link router-link-active"><!----> <span class="site-name">JavaDocs</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/javaDocs/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javaDocs/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/计算机/" class="nav-link"><i class="iconfont undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/中间件/" class="nav-link"><i class="iconfont undefined"></i>
+  中间件
+</a></li></ul></div></div><div class="nav-item"><a href="/javaDocs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/javaDocs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/javaDocs/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <a href="https://github.com/coderbruis/javaDocs" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-584a622c></div> <aside class="sidebar" data-v-584a622c><div class="personal-info-wrapper" data-v-7e653f02><img src="/javaDocs/vuepress/head-fish.jpg" alt="author-avatar" class="personal-img" data-v-7e653f02> <h3 class="name" data-v-7e653f02>
+    CoderBruis
+  </h3> <div class="num" data-v-7e653f02><div data-v-7e653f02><h3 data-v-7e653f02>61</h3> <h6 data-v-7e653f02>文章</h6></div> <div data-v-7e653f02><h3 data-v-7e653f02>20</h3> <h6 data-v-7e653f02>标签</h6></div></div> <hr data-v-7e653f02></div> <nav class="nav-links"><div class="nav-item"><a href="/javaDocs/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javaDocs/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/计算机/" class="nav-link"><i class="iconfont undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/中间件/" class="nav-link"><i class="iconfont undefined"></i>
+  中间件
+</a></li></ul></div></div><div class="nav-item"><a href="/javaDocs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/javaDocs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/javaDocs/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <a href="https://github.com/coderbruis/javaDocs" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/javaDocs/views/" class="sidebar-link">概览</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java进阶</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JVM相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Netty相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/javaDocs/views/computer-base/二进制反码补码基础.html" class="active sidebar-link">二进制反码补码基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#正文" class="sidebar-link">正文</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#_1-二进制基础" class="sidebar-link">1. 二进制基础</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#_2-二进制运算" class="sidebar-link">2. 二进制运算</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#_3-二进制的源码、补码以及反码" class="sidebar-link">3. 二进制的源码、补码以及反码</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#_4-二进制的移位运算符" class="sidebar-link">4. 二进制的移位运算符</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#_5-示例" class="sidebar-link">5. 示例</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/computer-base/二进制反码补码基础.html#总结" class="sidebar-link">总结</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ElasticSearch相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>RocketMQ相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式与代码重构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-73c95a87 data-v-584a622c><h3 class="title" style="display:none;" data-v-73c95a87 data-v-73c95a87>二进制反码补码基础</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-73c95a87 data-v-73c95a87><input type="password" value="" data-v-73c95a87> <span data-v-73c95a87>Konck! Knock!</span> <button data-v-73c95a87>OK</button></label> <div class="footer" style="display:none;" data-v-73c95a87 data-v-73c95a87><span data-v-73c95a87><i class="iconfont reco-theme" data-v-73c95a87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-73c95a87>vuePress-theme-reco</a></span> <span data-v-73c95a87><i class="iconfont reco-copyright" data-v-73c95a87></i> <a data-v-73c95a87><span data-v-73c95a87>CoderBruis</span>
+            
+          <span data-v-73c95a87>2021 - </span>
+          2022
+        </a></span></div></div> <div data-v-584a622c><main class="page"><!----> <div class="page-title" style="display:none;"><h1>二进制反码补码基础</h1> <hr> <div data-v-7b2e794a><i class="iconfont reco-account" data-v-7b2e794a><span data-v-7b2e794a>CoderBruis</span></i> <i class="iconfont reco-date" data-v-7b2e794a><span data-v-7b2e794a>2021-05-21 13:53:26</span></i> <!----> <i class="iconfont reco-tag tags" data-v-7b2e794a><span class="tag-item" data-v-7b2e794a>
+      计算机基础
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>在学习框架源码底层时，有非常多的二进制运算，由于大学学习计算机基础时开小差，没有学习牢固，所以在看底层源码的算法逻辑时遇到二进制运算比较吃力，遂通过一篇博文来总结下二进制运算，记录一下。</p> <p>读者认真阅读完整片文章，看完如果还不懂可以来砍我~</p> <h2 id="正文"><a href="#正文" class="header-anchor">#</a> 正文</h2> <h3 id="_1-二进制基础"><a href="#_1-二进制基础" class="header-anchor">#</a> 1. 二进制基础</h3> <p>因为计算机底层是通过二进制来进行计算的，所以在计算机底层会将十进制转换为二进制。十进制就是逢10进1，二进制就是逢2进1。</p> <p>就十进制来说，比如一百可以分为三位，个位、十位、百位, 用位数在下列表示 101这个十进制数。</p> <table><thead><tr><th>百位</th> <th>十位</th> <th>十位</th></tr></thead> <tbody><tr><td>1</td> <td>0</td> <td>1</td></tr></tbody></table> <p>因此对于十进制来说，越往上进制位越大，比如千位、万位。</p> <p>同理，对于二进制来说也有对应位数, 如果表示二进制的4。</p> <table><thead><tr><th>4(2^2)</th> <th>2(2^1)</th> <th>1(2^0)</th></tr></thead> <tbody><tr><td>1</td> <td>0</td> <td>0</td></tr></tbody></table> <p>1 * 4 + 2 * 0 + 1 * 0 = 4</p> <p>如果要表示二进制的5，则如下图</p> <table><thead><tr><th>4(2^2)</th> <th>2(2^1)</th> <th>1(2^0)</th></tr></thead> <tbody><tr><td>1</td> <td>0</td> <td>1</td></tr></tbody></table> <p>4 * 1 + 2 * 0 + 1 * 1 = 5</p> <p>如果要表示二进制的11，则如下图</p> <table><thead><tr><th>8(2^3)</th> <th>4(2^2)</th> <th>2(2^1)</th> <th>1(2^0)</th></tr></thead> <tbody><tr><td>1</td> <td>0</td> <td>1</td> <td>1</td></tr></tbody></table> <p>8 * 1 + 4 * 0 + 2 * 1 + 1 * 1 = 11</p> <p>在计算机中，1字节有8位二进制位。</p> <h3 id="_2-二进制运算"><a href="#_2-二进制运算" class="header-anchor">#</a> 2. 二进制运算</h3> <p>在计算机系统中，二进制运算包括了二进制<strong>逻辑运算</strong>和二进制<strong>算术运算</strong>，而逻辑运算和算术运算的主要区别在于，逻辑运算是按位进行，不像算术运算中位与位之间有进位和借位的联系。下面介绍的与、或、异运算就属于二进制的逻辑运算。</p> <h4 id="_2-1-二进制逻辑运算"><a href="#_2-1-二进制逻辑运算" class="header-anchor">#</a> 2.1 二进制逻辑运算</h4> <p>对于二进制的逻辑运算，记住一个口诀：</p> <ol><li><p>与（&amp;）运算</p> <p>运算规则：
+<code>0&amp;0=0, 0&amp;1=0, 1&amp;0=0, 1&amp;1=1</code></p> <p>二者为1则为1，否则都为0。</p></li> <li><p>或（|）运算</p> <p>运算规则：
+<code>0|0=0，0|1=1，1|0=1，1|1=1</code></p> <p>遇1则1，否则为0。</p></li> <li><p>异（^）或运算</p> <p>运算规则：
+<code>0^0=0, 1^0=1, 0^1=1, 1^1=0</code></p> <p>同为0，异为1。</p></li> <li><p>非（~）运算</p> <p>运算规则：非运算即取反运算，在二进制中1变0,0变1</p></li></ol> <p>由于算术运算中会设计符号数的运算，所以先介绍二进制中的源码、补码以及反码。</p> <h4 id="_2-2-二进制算术运算"><a href="#_2-2-二进制算术运算" class="header-anchor">#</a> 2.2 二进制算术运算</h4> <p>在二进制算术运算中，包括加、减、乘、除。</p> <blockquote><p>加法</p></blockquote> <p>0 + 0 = 1
+1 + 1 = 10
+1 + 0 = 1
+0 + 1 = 1</p> <blockquote><p>乘法</p></blockquote> <p>0 × 0 = 0
+1 × 0 = 0
+0 × 1 = 0
+1 × 1 = 1</p> <blockquote><p>减法</p></blockquote> <p>0－0=0
+1－0=1
+1－1=0
+0－1=1</p> <blockquote><p>除法</p></blockquote> <p>0÷1=0
+1÷1=1</p> <h3 id="_3-二进制的源码、补码以及反码"><a href="#_3-二进制的源码、补码以及反码" class="header-anchor">#</a> 3. 二进制的源码、补码以及反码</h3> <blockquote><p>二进制源码是什么？</p></blockquote> <p>由于数字有正负之分，所以在计算机中通过在一个数的二进制的最高位存放符号（0为正，1为负），而其他数值位存放着就是数值的二进制位, 这就是二进制源码。<strong>需要知道的是，正数的源码、补码和反码都是一样的。</strong></p> <p>源码有缺点，就是不能直接进行运算，因为运算会出错。源码是有符号数的最简单的编码方式，便于输入输出，但作为代码加减运算时较为复杂。</p> <blockquote><p>二进制反码是什么？</p></blockquote> <p>反码通常是用来由源码求补码或者由补码求源码的过度码，根据定义可以根据补码的整数和小数中&quot;0&quot;的表示形式各有2中，+0和-0不一样。以8位机器数为例，
+整数的&quot;+0&quot;源码为：0,0000000，反码为：0,0000000。整数的&quot;-0&quot;源码为：1,0000000，反码为：1,1111111。</p> <p>反码跟源码是正数时一样，为负数是，除符号位外，其他为所有数值取反。</p> <p>一句话概括就是，反码是用于计算负数补码的过度码。</p> <blockquote><p>二进制补码是什么？</p></blockquote> <p>由于数字有正负之分，所以在计算机中通过在一个数的二进制的最高位存放符号（0为正，1为负），而这就是机器数的补码。还需要知道的一点是，在计算机中是负数是以补码的形式存储的，由于正数的源码和补码相同，所以正数以源码或者补码的形式存储在计算机中都是正确的说法，而负数的源码和补码则不相同。<strong>二进制运算后，会将补码结果转换为源码之后，再计算其十进制值。</strong></p> <p>总结起来补码的作用就是：</p> <ol><li>使符号位能与有效值部分一起参加运算,从而简化运算规则.</li> <li>使减法运算转换为加法运算,进一步简化计算机中运算器的线路设计 所有这些转换都是在计算机的最底层进行的，而在我们使用的汇编、C等其他高级语言中使用的都是原码。</li></ol> <blockquote><p>源码和反码之间怎么转换？</p></blockquote> <p>源码除了最高位的符号位外，其他位数全部取反，得到的就是反码。</p> <blockquote><p>补码和反码之间怎么转换？</p></blockquote> <p>补码则是在反码的基础上加一。</p> <blockquote><p>小结</p></blockquote> <p>对于源码、补码和反码，三者均有符号位和数值位两部分，最高位为符号位，其余位均为数值位。符号位用0表示正，1表示负，而数值位三者表示方法都不同。在计算机系统中，数值一律用补码来
+表示和存储，原因在于补码可以将符号位和数值域统一处理，同时加法和减法也可以同一处理，此外源码和补码互相转换，其运算过程是相同的，不需要额外的硬件电路。
+一个负整数和其补数相加和为模，对一个整数的补码再求补码等于该整数自身，补码的正零与负零表示方法相同。</p> <h3 id="_4-二进制的移位运算符"><a href="#_4-二进制的移位运算符" class="header-anchor">#</a> 4. 二进制的移位运算符</h3> <p>在二进制中，移位运算符是一种位操作运算符。移位运算符可以在二进制的基础上对数字进行平移。按照平移的方向和位数填充规则可以将移位运算符分为三种：&lt;&lt;（左移）、&gt;&gt;（有符号右移）和&gt;&gt;&gt;（无符号右移）。</p> <h4 id="_4-1-（左移）"><a href="#_4-1-（左移）" class="header-anchor">#</a> 4.1 &lt;&lt;（左移）</h4> <p>&lt;&lt;表示的是左移，将运算数的二进制整体左移指定的位数，低位用0补齐，因此左移不存在有符号和无符号的区别。</p> <p>例如在java中int类型的十进制数16，<strong>由于在java中，int类型占4字节，1字节有8位，</strong> 所以其二进制源码表示为：</p> <p>0000 0000 0000 0000 0000 0000 0001 0000</p> <p>16 &lt;&lt; 2 ，就是相当于将16的二进制数整体左移2为，然后低位补0，移位操作后：</p> <p>0000 0000 0000 0000 0000 0000 0100 0000</p> <p>那么我们再来看下对于负数的左移运算。</p> <p>-16，其二进制源码为：
+1000 0000 0000 0000 0000 0000 0001 0000</p> <p>反码：
+1111 1111 1111 1111 1111 1111 1110 1111</p> <p>补码：
+1111 1111 1111 1111 1111 1111 1111 0000</p> <p>-16 &lt;&lt; 2 , 对补码进行向左移2位, 低位补0
+1111 1111 1111 1111 1111 1111 1100 0000
+由于移位后最高位仍然为1，表示负数，所以需要借助反码来运算</p> <p>反码为补码 - 1，则结果为：
+1111 1111 1111 1111 1111 1111 1011 1111</p> <p>源码为反码取反，则结果为：
+1000 0000 0000 0000 0000 0000 0100 0000
+-1 * (2 * 2 ^ 6) = -64</p> <p><strong>小结：对于左移运算，a &lt;&lt; b，相当于 a * 2 ^ b。</strong></p> <h4 id="_4-2-（有符号右移）"><a href="#_4-2-（有符号右移）" class="header-anchor">#</a> 4.2 &gt;&gt; （有符号右移）</h4> <p>在计算机中&gt;&gt; 表示有符号右移，就是将二进制整体右移指定位数，如果是正数，则高位用0补齐，如果是负数，则高位用1补齐。</p> <p>仍然用java中16和-16来进行有符号右移操作，</p> <p>16 &gt;&gt; 2</p> <p>通过二进制补码是运算，最终结果为4，同样的-16 &gt;&gt; 2 结果为-4，详细的通过二进制运算结果这里就不展示了，参考左移中列出的详细步骤。</p> <p><strong>小结：对于有符号右移来说，如果是正数，移动指定位数后，高位用0来补齐；如果是负数，高位用1补齐。</strong></p> <h4 id="_4-3-（无符号右移）"><a href="#_4-3-（无符号右移）" class="header-anchor">#</a> 4.3 &gt;&gt;&gt;（无符号右移）</h4> <p>在计算机中通过&gt;&gt;&gt;来表示无符号右移，不管是正数还是负数，高位都用0来补齐。</p> <p>对于正数，无符号右移&gt;&gt;&gt;和有符号右移&gt;&gt;结果都相同。</p> <p>同样的用java中16和-16来进行无符号右移运算。</p> <p>16 &gt;&gt;&gt; 2 结果为 4。</p> <p>而对于负数来说，无符号右移结果就需要进行计算了。</p> <p>-16的补码为：
+1111 1111 1111 1111 1111 1111 1111 0000</p> <p>则无符号右移，结果为：
+0011 1111 1111 1111 1111 1111 1111 1100</p> <p>由于正数的源码、补码和反码都一样，所以移位后的源码为：
+0011 1111 1111 1111 1111 1111 1111 1100，计算二进制得。</p> <p>1 * 2 ^ 29 + 1 * 2 ^ 28 + 1 * 2 ^ 27 + 1 * 2 ^ 26 + ... + 1 * 2 ^ 2 = 1073741820。</p> <blockquote><p>tip 可以通过小技巧来快速计算结果</p></blockquote> <p>聪明的读者估计能发现，在二进制位数中，高位的十进制值为其余右边进制之和 + 1，读者可以自行去验证。
+所以，</p> <p>0011 1111 1111 1111 1111 1111 1111 1100
+^
+取该位置计算得出的十进制值，然后-1，再减去 1 * 2^1 + 1 * 2 ^ 0，即：
+2 ^ 30 - 1 - 2 ^ 1 - 2 ^ 0 =1073741824 - 1 - 2 - 1 = 1073741820。</p> <p><img src="https://img-blog.csdnimg.cn/20200706104749987.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvZGVyQnJ1aXM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <h3 id="_5-示例"><a href="#_5-示例" class="header-anchor">#</a> 5. 示例</h3> <p>比如变量 a &amp; (-a) 用二进制怎么运算：</p> <blockquote><p>10 &amp; (-10)</p></blockquote> <p>&amp;是按位与，首先在计算机中数字都是以补码的形式存在的，比如：</p> <p>int a = 10</p> <p>+10，它的源码为：</p> <p>0000 0000 0000 0000 0000 0000 0000 1010</p> <p>由于正数的源码和补码相同，所以它的补码为：</p> <p>0000 0000 0000 0000 0000 0000 0000 1010</p> <p>对于-10，</p> <p>它的源码为：</p> <p>0000 0000 0000 0000 0000 0000 1000 1010</p> <p>它的反码是源码的数值域取反，即：</p> <p>1111 1111 1111 1111 1111 1111 1111 0101</p> <p>它的补码是反码+1，即：</p> <p>1111 1111 1111 1111 1111 1111 1111 0110</p> <p>由于二进制运算都是用补码来计算的，所以 a &amp; (-a) ，就是：</p> <p>0000 0000 0000 0000 0000 0000 0000 1010 &amp; 1111 1111 1111 1111 1111 1111 1111 0110 = 0000 0000 0000 0000 0000 0000 0000 0010</p> <p><strong>对于二进制来说，由于最高位为0，所以可以知道该数为正数，所以源码、补码和反码都一样。</strong>
+而由于除开最高位符号位外的所有高位都为0，所以可以只看低四位，即0010，换算十进制后为2。</p> <p>所以如果a=10，则 10 &amp; (-10) = 2。</p> <p>算完了&amp;，那么再来计算下 ^ 和 | ，看下计算机中是如何通过补码来计算的。</p> <blockquote><p>10 ^ (-10)</p></blockquote> <p>由于10的补码为：
+0000 0000 0000 0000 0000 0000 0000 1010
+-10的补码为：
+1111 1111 1111 1111 1111 1111 1111 0110</p> <p>则10 ^ -10 的补码结果为：
+1111 1111 1111 1111 1111 1111 1111 1100</p> <p><strong>由于最高位为1，则该数为负数，需要借助反码来计算其源码。</strong></p> <p>反码为补码 - 1，则结果为：
+1111 1111 1111 1111 1111 1111 1111 1011</p> <p>源码为反码取反，结果为：
+1000 0000 0000 0000 0000 0000 0000 0100
+则十进制结果为-4。</p> <blockquote><p>10 | (-10)</p></blockquote> <p>由于10的补码为：
+0000 0000 0000 0000 0000 0000 0000 1010
+-10的补码为：
+1111 1111 1111 1111 1111 1111 1111 0110</p> <p><strong>由于最高位为1，则该数为负数，需要借助反码来计算其源码。</strong></p> <p>则10 | -10 的补码结果为：
+1111 1111 1111 1111 1111 1111 1111 1110
+反码结果为补码 - 1，则结果为：
+1111 1111 1111 1111 1111 1111 1111 1101
+源码为反码结果取反，结果为：
+1000 0000 0000 0000 0000 0000 0000 0010</p> <p>计算的十进制结果为 -2。</p> <p><img src="https://img-blog.csdnimg.cn/20200706092557131.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0NvZGVyQnJ1aXM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <p>通过一个简单的示例分析，相信读者已经弄清楚了源码、补码和反码之间的关系以及在二进制运算中是如何运用的了。</p> <p><strong>在开源框架底层中算法会用到大量的二进制运算，</strong> 例如：在最近学习的Netty底层源码中，DefaultEventExecutorChooserFactory的底层源码有一个方法, 就是通过 a &amp; (-a)来运算的。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@Override
+public EventExecutorChooser newChooser(EventExecutor[] executors) {
+    if (isPowerOfTwo(executors.length)) {
+        return new PowerOfTowEventExecutorChooser(executors);
+    } else {
+        return new GenericEventExecutorChooser(executors);
+    }
+}
+/*
+ * 用于计算val是否是2的幂，例如2、4、8、16
+ */
+private static boolean isPowerOfTwo(int val) {
+   return (val &amp; -val) == val;
+}
+
+private static final class PowerOfTowEventExecutorChooser implements EventExecutorChooser {
+    private final AtomicInteger idx = new AtomicInteger();
+    private final EventExecutor[] executors;
+
+    PowerOfTowEventExecutorChooser(EventExecutor[] executors) {
+        this.executors = executors;
+    }
+
+    /*
+     * 通过二进制与运算计算出下标索引值，原理如下：
+     * 假设：idx = 2 , 二进制表示为：0000 0010
+     * executors.length = 16, 则executors.length - 1 = 15, 二进制表示为：0000 1111
+     * 
+     * 由于是与运算，且executors.length高四位为0000，则只需要注意低四位的运算。
+     * 则： 0010 &amp; 1111 = 0010 ，十进制表示为2，
+     * 
+     * 所以如果idx = 3, 则二进制为：0011 &amp; 1111 = 0011 也为3，
+     * 等idx = 16时，二进制为：0001 0000 &amp; 1111 = 0000 0000 ，即十进制的1，
+     * 这样就实现了在0 ~ 15 范围内循环获取下标索引的目的。
+     */
+    @Override
+    public EventExecutor next() {
+        return executors[idx.getAndIncrement() &amp; executors.length - 1];
+    }
+}
+
+private static final class GenericEventExecutorChooser implements EventExecutorChooser {
+    private final AtomicInteger idx = new AtomicInteger();
+    private final EventExecutor[] executors;
+
+    GenericEventExecutorChooser(EventExecutor[] executors) {
+        this.executors = executors;
+    }
+
+    /*
+     * 通过取余运算，计算出下标索引
+     */
+    @Override
+    public EventExecutor next() {
+        return executors[Math.abs(idx.getAndIncrement() % executors.length)];
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br></div></div><h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <p>在计算机中，二进制的运算是比较重要的，可以看到在Java的许多开源框架底层就运用到了大量的二进制与或非运算，所以学好二进制的基础概念是非常重要的。</p> <div id="boxx" data-v-e16ac808><div data-v-e16ac808><p v-if="true" class="custom-block-title" data-v-e16ac808></p> <p v-if="true" data-v-e16ac808></p></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <div class="article-list" data-v-2af88190><div class="article-title" data-v-2af88190><a href="/javaDocs/timeline/" class="iconfont icon-shizhong" data-v-2af88190>最近更新</a></div> <div class="article-wrapper" data-v-2af88190><dl data-v-2af88190><dd data-v-2af88190>01</dd> <dt data-v-2af88190><a href="/javaDocs/views/redis/Redis%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%B7%A5%E4%BD%9C%E5%87%86%E5%A4%87.html" data-v-2af88190><div data-v-2af88190>Redis源码阅读工作准备</div></a> <span data-v-2af88190>09-10</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>02</dd> <dt data-v-2af88190><a href="/javaDocs/views/rocketMQ/%5B%E6%80%BB%E6%B1%87%5DRocketMQ%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87.html" data-v-2af88190><div data-v-2af88190>【总汇】RocketMQ优秀博文</div></a> <span data-v-2af88190>08-10</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>03</dd> <dt data-v-2af88190><a href="/javaDocs/views/rocketMQ/RocketMQ%E5%8F%8C%E5%8D%81%E4%B8%80%E5%AE%9E%E6%88%98.html" data-v-2af88190><div data-v-2af88190>RocketMQ双十一实战</div></a> <span data-v-2af88190>08-07</span></dt></dl></div> <div data-v-2af88190><a href="/javaDocs/timeline/" class="article-more" data-v-2af88190>更多文章 &gt;</a></div></div></main> <!----> <div class="comments-wrapper" style="display:none;" data-v-584a622c><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div><!----><div data-v-3338c3f8><div class="DetailsOpenFlag" style="right:1rem;bottom:9rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;font-size:14px;font-weight:500;display:none;" data-v-3338c3f8>
+ 展开
+
+</div></div><!----></div></div>
+    <script src="/javaDocs/assets/js/app.87118588.js" defer></script><script src="/javaDocs/assets/js/5.ce38acb5.js" defer></script><script src="/javaDocs/assets/js/1.e99f6fa9.js" defer></script><script src="/javaDocs/assets/js/2.7e97c293.js" defer></script><script src="/javaDocs/assets/js/26.247fea4c.js" defer></script><script src="/javaDocs/assets/js/19.93b2bff0.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuex | JavaDocs</title>
+    <meta name="description" content="温故而知新，可以为师矣">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/javaDocs/icon.jpg">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <script language="javascript" type="text/javascript" src="/javaDocs/js/jquery.min-1.7.2.js"></script>
+  <script language="javascript" type="text/javascript" src="/javaDocs/js/MouseClickEffect.js"></script>
+  <script src="/javaDocs/js/jquery.slim.min-3.3.1.js"></script>
+  <script src="/javaDocs/js/jquery.fancybox.min-3.5.2.js"></script>
+  <link rel="stylesheet" type="text/css" href="/javaDocs/css/jquery.fancybox.min-3.5.2.css">
+    
+    <link rel="preload" href="/javaDocs/assets/css/0.styles.1cdf42f6.css" as="style"><link rel="preload" href="/javaDocs/assets/js/app.87118588.js" as="script"><link rel="preload" href="/javaDocs/assets/js/5.ce38acb5.js" as="script"><link rel="preload" href="/javaDocs/assets/js/1.e99f6fa9.js" as="script"><link rel="preload" href="/javaDocs/assets/js/2.7e97c293.js" as="script"><link rel="preload" href="/javaDocs/assets/js/85.d522eec5.js" as="script"><link rel="preload" href="/javaDocs/assets/js/19.93b2bff0.js" as="script"><link rel="prefetch" href="/javaDocs/assets/js/10.5bd24191.js"><link rel="prefetch" href="/javaDocs/assets/js/11.b438e7ea.js"><link rel="prefetch" href="/javaDocs/assets/js/12.a5711bc4.js"><link rel="prefetch" href="/javaDocs/assets/js/13.ff549af2.js"><link rel="prefetch" href="/javaDocs/assets/js/14.7e229e13.js"><link rel="prefetch" href="/javaDocs/assets/js/15.94d47c82.js"><link rel="prefetch" href="/javaDocs/assets/js/16.58b4a22a.js"><link rel="prefetch" href="/javaDocs/assets/js/17.1911ccb1.js"><link rel="prefetch" href="/javaDocs/assets/js/18.07afe61e.js"><link rel="prefetch" href="/javaDocs/assets/js/20.8d73195b.js"><link rel="prefetch" href="/javaDocs/assets/js/21.12a421d4.js"><link rel="prefetch" href="/javaDocs/assets/js/22.eba2dbd2.js"><link rel="prefetch" href="/javaDocs/assets/js/23.a8195967.js"><link rel="prefetch" href="/javaDocs/assets/js/24.62c9750b.js"><link rel="prefetch" href="/javaDocs/assets/js/25.6d6da24b.js"><link rel="prefetch" href="/javaDocs/assets/js/26.247fea4c.js"><link rel="prefetch" href="/javaDocs/assets/js/27.f7c74453.js"><link rel="prefetch" href="/javaDocs/assets/js/28.1edcee97.js"><link rel="prefetch" href="/javaDocs/assets/js/29.3d84f6b2.js"><link rel="prefetch" href="/javaDocs/assets/js/30.7c9b4d63.js"><link rel="prefetch" href="/javaDocs/assets/js/31.b85d7cf1.js"><link rel="prefetch" href="/javaDocs/assets/js/32.9cc9149f.js"><link rel="prefetch" href="/javaDocs/assets/js/33.1742125d.js"><link rel="prefetch" href="/javaDocs/assets/js/34.f1b396d8.js"><link rel="prefetch" href="/javaDocs/assets/js/35.b5011383.js"><link rel="prefetch" href="/javaDocs/assets/js/36.5659853c.js"><link rel="prefetch" href="/javaDocs/assets/js/37.37b471a6.js"><link rel="prefetch" href="/javaDocs/assets/js/38.b80df1ae.js"><link rel="prefetch" href="/javaDocs/assets/js/39.476f9ba3.js"><link rel="prefetch" href="/javaDocs/assets/js/40.3cf1ea8d.js"><link rel="prefetch" href="/javaDocs/assets/js/41.96bbf011.js"><link rel="prefetch" href="/javaDocs/assets/js/42.c98f928b.js"><link rel="prefetch" href="/javaDocs/assets/js/43.3f02d5f9.js"><link rel="prefetch" href="/javaDocs/assets/js/44.7f4c7b82.js"><link rel="prefetch" href="/javaDocs/assets/js/45.e39af5a1.js"><link rel="prefetch" href="/javaDocs/assets/js/46.08bdfb02.js"><link rel="prefetch" href="/javaDocs/assets/js/47.99b5f678.js"><link rel="prefetch" href="/javaDocs/assets/js/48.29643629.js"><link rel="prefetch" href="/javaDocs/assets/js/49.ad7ce5f7.js"><link rel="prefetch" href="/javaDocs/assets/js/50.2e241c31.js"><link rel="prefetch" href="/javaDocs/assets/js/51.bf94dc6c.js"><link rel="prefetch" href="/javaDocs/assets/js/52.e8cd3874.js"><link rel="prefetch" href="/javaDocs/assets/js/53.8d15fd20.js"><link rel="prefetch" href="/javaDocs/assets/js/54.eac32e6d.js"><link rel="prefetch" href="/javaDocs/assets/js/55.379c098a.js"><link rel="prefetch" href="/javaDocs/assets/js/56.0919815a.js"><link rel="prefetch" href="/javaDocs/assets/js/57.d1c2a7c6.js"><link rel="prefetch" href="/javaDocs/assets/js/58.c3cc39f0.js"><link rel="prefetch" href="/javaDocs/assets/js/59.163edd61.js"><link rel="prefetch" href="/javaDocs/assets/js/6.a83a4a45.js"><link rel="prefetch" href="/javaDocs/assets/js/60.bdf5ac86.js"><link rel="prefetch" href="/javaDocs/assets/js/61.963e5fe8.js"><link rel="prefetch" href="/javaDocs/assets/js/62.b5a91d7c.js"><link rel="prefetch" href="/javaDocs/assets/js/63.b535fb1e.js"><link rel="prefetch" href="/javaDocs/assets/js/64.387b922b.js"><link rel="prefetch" href="/javaDocs/assets/js/65.150ff8c1.js"><link rel="prefetch" href="/javaDocs/assets/js/66.6011ebf9.js"><link rel="prefetch" href="/javaDocs/assets/js/67.75dbc87b.js"><link rel="prefetch" href="/javaDocs/assets/js/68.8cecf1f1.js"><link rel="prefetch" href="/javaDocs/assets/js/69.9909cbe5.js"><link rel="prefetch" href="/javaDocs/assets/js/7.41f894ca.js"><link rel="prefetch" href="/javaDocs/assets/js/70.0c1ac7fd.js"><link rel="prefetch" href="/javaDocs/assets/js/71.15b72a68.js"><link rel="prefetch" href="/javaDocs/assets/js/72.bfffca59.js"><link rel="prefetch" href="/javaDocs/assets/js/73.d66defc8.js"><link rel="prefetch" href="/javaDocs/assets/js/74.aec69e06.js"><link rel="prefetch" href="/javaDocs/assets/js/75.a510a279.js"><link rel="prefetch" href="/javaDocs/assets/js/76.03c90f06.js"><link rel="prefetch" href="/javaDocs/assets/js/77.b442b520.js"><link rel="prefetch" href="/javaDocs/assets/js/78.89836da9.js"><link rel="prefetch" href="/javaDocs/assets/js/79.ea2f41ed.js"><link rel="prefetch" href="/javaDocs/assets/js/8.50a3a717.js"><link rel="prefetch" href="/javaDocs/assets/js/80.3dbf5119.js"><link rel="prefetch" href="/javaDocs/assets/js/81.d703076c.js"><link rel="prefetch" href="/javaDocs/assets/js/82.98fd6152.js"><link rel="prefetch" href="/javaDocs/assets/js/83.b0a671cf.js"><link rel="prefetch" href="/javaDocs/assets/js/84.6a966104.js"><link rel="prefetch" href="/javaDocs/assets/js/86.89a15dbe.js"><link rel="prefetch" href="/javaDocs/assets/js/87.9223ad5c.js"><link rel="prefetch" href="/javaDocs/assets/js/9.74ebf4ef.js"><link rel="prefetch" href="/javaDocs/assets/js/vendors~flowchart.3aeee9ac.js">
+    <link rel="stylesheet" href="/javaDocs/assets/css/0.styles.1cdf42f6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container" data-v-584a622c><div data-v-584a622c><div id="loader-wrapper" class="loading-wrapper" data-v-4b73742e data-v-584a622c data-v-584a622c><div class="loader-main" data-v-4b73742e><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div><div data-v-4b73742e></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-73c95a87 data-v-584a622c data-v-584a622c><h3 class="title" style="display:none;" data-v-73c95a87 data-v-73c95a87>JavaDocs</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-73c95a87 data-v-73c95a87><input type="password" value="" data-v-73c95a87> <span data-v-73c95a87>Konck! Knock!</span> <button data-v-73c95a87>OK</button></label> <div class="footer" style="display:none;" data-v-73c95a87 data-v-73c95a87><span data-v-73c95a87><i class="iconfont reco-theme" data-v-73c95a87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-73c95a87>vuePress-theme-reco</a></span> <span data-v-73c95a87><i class="iconfont reco-copyright" data-v-73c95a87></i> <a data-v-73c95a87><span data-v-73c95a87>CoderBruis</span>
+            
+          <span data-v-73c95a87>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-584a622c><header class="navbar" data-v-584a622c><div title="导航" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/javaDocs/" class="home-link router-link-active"><!----> <span class="site-name">JavaDocs</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/javaDocs/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javaDocs/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/计算机/" class="nav-link"><i class="iconfont undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/中间件/" class="nav-link"><i class="iconfont undefined"></i>
+  中间件
+</a></li></ul></div></div><div class="nav-item"><a href="/javaDocs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/javaDocs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/javaDocs/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <a href="https://github.com/coderbruis/javaDocs" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-584a622c></div> <aside class="sidebar" data-v-584a622c><div class="personal-info-wrapper" data-v-7e653f02><img src="/javaDocs/vuepress/head-fish.jpg" alt="author-avatar" class="personal-img" data-v-7e653f02> <h3 class="name" data-v-7e653f02>
+    CoderBruis
+  </h3> <div class="num" data-v-7e653f02><div data-v-7e653f02><h3 data-v-7e653f02>61</h3> <h6 data-v-7e653f02>文章</h6></div> <div data-v-7e653f02><h3 data-v-7e653f02>20</h3> <h6 data-v-7e653f02>标签</h6></div></div> <hr data-v-7e653f02></div> <nav class="nav-links"><div class="nav-item"><a href="/javaDocs/index.html" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javaDocs/categories/后端/" class="nav-link"><i class="iconfont undefined"></i>
+  后端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/计算机/" class="nav-link"><i class="iconfont undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/其他/" class="nav-link"><i class="iconfont undefined"></i>
+  其他
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/前端/" class="nav-link"><i class="iconfont undefined"></i>
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/javaDocs/categories/中间件/" class="nav-link"><i class="iconfont undefined"></i>
+  中间件
+</a></li></ul></div></div><div class="nav-item"><a href="/javaDocs/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-document"></i>
+      其它
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Projects🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  My Project
+</a></li></ul></li><li class="dropdown-item"><h4>Common sites🎈</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/javaDocs/other/friends.html" class="nav-link"><i class="iconfont undefined"></i>
+  友 链
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/javaDocs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/javaDocs/about/" class="nav-link"><i class="iconfont reco-message"></i>
+  关于我
+</a></div> <a href="https://github.com/coderbruis/javaDocs" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/javaDocs/views/" class="sidebar-link">概览</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Java进阶</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JVM相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Netty相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>计算机基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vue相关</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/javaDocs/views/vue/vuex.html" class="active sidebar-link">vuex</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/javaDocs/views/vue/vuex.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/vue/vuex.html#正文" class="sidebar-link">正文</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/javaDocs/views/vue/vuex.html#_1-vuex的基本使用" class="sidebar-link">1 Vuex的基本使用</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/vue/vuex.html#_2-vuex的核心概念" class="sidebar-link">2 Vuex的核心概念</a></li></ul></li><li class="sidebar-sub-header"><a href="/javaDocs/views/vue/vuex.html#总结" class="sidebar-link">总结</a></li><li class="sidebar-sub-header"><a href="/javaDocs/views/vue/vuex.html#参考" class="sidebar-link">参考</a></li></ul></li><li><a href="/javaDocs/views/vue/vue基础.html" class="sidebar-link">vue基础</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>项目总结</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ElasticSearch相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Redis相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>RocketMQ相关</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>设计模式与代码重构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-73c95a87 data-v-584a622c><h3 class="title" style="display:none;" data-v-73c95a87 data-v-73c95a87>vuex</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-73c95a87 data-v-73c95a87><input type="password" value="" data-v-73c95a87> <span data-v-73c95a87>Konck! Knock!</span> <button data-v-73c95a87>OK</button></label> <div class="footer" style="display:none;" data-v-73c95a87 data-v-73c95a87><span data-v-73c95a87><i class="iconfont reco-theme" data-v-73c95a87></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-73c95a87>vuePress-theme-reco</a></span> <span data-v-73c95a87><i class="iconfont reco-copyright" data-v-73c95a87></i> <a data-v-73c95a87><span data-v-73c95a87>CoderBruis</span>
+            
+          <span data-v-73c95a87>2021 - </span>
+          2022
+        </a></span></div></div> <div data-v-584a622c><main class="page"><!----> <div class="page-title" style="display:none;"><h1>vuex</h1> <hr> <div data-v-7b2e794a><i class="iconfont reco-account" data-v-7b2e794a><span data-v-7b2e794a>CoderBruis</span></i> <i class="iconfont reco-date" data-v-7b2e794a><span data-v-7b2e794a>2021-05-20 21:24:26</span></i> <!----> <i class="iconfont reco-tag tags" data-v-7b2e794a><span class="tag-item" data-v-7b2e794a>
+      vue
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>作为一个内心骚动想做点小系统的后端来说，学习Vue是过不去的一个坎，毕竟香嘛~</p> <p>遂写一篇博文用于记录在Vue中用的比较多的，且不容易记的知识点，方便自己在需要使用时能够查找到相关知识点以及如何快速使用。</p> <p>在基础篇中，已经介绍了关于Vuex中的一些基础知识点，下面就会陆续介绍Vuex中进阶的一些知识点，总结出来方便自己随时查阅。</p> <h2 id="正文"><a href="#正文" class="header-anchor">#</a> 正文</h2> <p>在官网上，对于Vuex的介绍为，Vuex是一个专为Vue.js应用程序开发的状态管理模式，说白了就是为了实现组件之间数据的共享。对于Vue来说，组件之间共享数据的方式：</p> <p>父组件向子组件传值：v-bind属性绑定
+子组件向父组件传值：v-on时间绑定
+兄弟组件之间共享数据：EventBus
+- $on 接受数据的那个组件
+- $emit 发送数据的那个组件</p> <p>一般情况下，只有组件之间共享的数据，才会必要存储到vuex中，对于组件中的私有数据，依旧存储在组件自身的data中即可。</p> <blockquote><p>本文是基于黑马《Vuex从入门到实战》视频总结+个人感悟而来</p></blockquote> <h3 id="_1-vuex的基本使用"><a href="#_1-vuex的基本使用" class="header-anchor">#</a> 1 Vuex的基本使用</h3> <ol><li>安装vuex依赖包</li></ol> <p>npm install vuex --save</p> <ol start="2"><li>导入vuex包</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>import Vuex from 'vuex'
+Vue.use(Vuex)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="3"><li>创建store对象</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>const store = new Vuex.Store({
+    // state中存放的就是全局共享的数据
+    state: {count: 0}
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="4"><li>将store对象挂载到vue实例中</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>new Vue({
+    el: '#app',
+    render: h =&gt; h(app),
+    router,
+    // 将创建的共享数据对象，挂载到Vue实例中
+    // 所有的组件，就可以直接从store中获取全局的数据了
+    store
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_2-vuex的核心概念"><a href="#_2-vuex的核心概念" class="header-anchor">#</a> 2 Vuex的核心概念</h3> <p>Vuex中的主要核心概念如下：</p> <ul><li>State</li> <li>Mutation</li> <li>Action</li> <li>Getter</li></ul> <h4 id="_2-1-state"><a href="#_2-1-state" class="header-anchor">#</a> 2.1 State</h4> <p>在Vuex中，State提供唯一的公共数据源，所有共享的数据都要统一放到Store的State中进行存储，这里的Store相当于一个用于存储数据的公共容器。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const store = new Vue.Store({
+    state: {
+        count: 0
+    }
+    ...
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><strong>组件访问State中数据的第一种方式</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>this.$store.state.全局数据名称
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>去过是在html元素组件之间调用，则可以省略this，即：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;span&gt;{{$store.state.全局数据名称}}&lt;/span&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>组件访问State中数据的第二种方式</strong></p> <p>通过mapState辅助函数方式，实现组件访问State中数据的第二种方式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. 从vuex中按需导入mapState函数
+import { mapState } from 'vuex'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>通过刚才导入的mapState函数，将当前组件需要的全局数据，映射为当前的computed计算属性：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 2. 将全局数据映射为当前组件的计算属性
+computed: {
+    // ...表示展开映射，意思就是将全局属性映射为当前组件的计算属性
+    ...mapState(['count'])
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>直接在调用获取组件属性</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;span&gt;{{count}}&lt;/span&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="_2-2-mutation"><a href="#_2-2-mutation" class="header-anchor">#</a> 2.2 Mutation</h4> <p>Vuex中的Mutation是用于变更Store中的数据。</p> <p>在Vuex中，只能通过mutation变更Store数据，不可以直接操作Store中的数据。虽然通过mutation的方式来操作数据，虽然繁琐了一点，但是却可以集中监控所有数据的变化。</p> <p>例如需要让全局数据自增加1，则可以通过如下的方式在Mutation中定义</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {
+        add(state) {
+            //变更状态
+            state.count++;
+        }
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>定义完mutation之后，下面就来介绍下Vuex的触发方式</p> <p><strong>触发mutation方式一</strong></p> <p>通过$store.commit()函数来触发mutation。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>methods: {
+    handle1 () {
+        // 触发mutations的第一种方式
+        this.$store.commit('add')
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>接着就可以通过@click方法来调用handle1，从而来触发mutation函数。</p> <p>另外，可以在触发mutation函数时，传入参数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {
+        add(state) {
+            //变更状态
+            state.count++;
+        },
+        addN(state, n) {
+            state.count += n;
+        }
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>然后定义handler2</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>methods: {
+    handler2: {
+        this.$store.commit('addN', 5);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><strong>触发mutation方式二</strong></p> <p>通过导入mapMutations辅助函数来触发mutations。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. 从vuex中按需导入mapMutations函数
+import { mapMutations } from 'vuex'
+
+...
+
+// 2. 将制定的mutations函数映射为当前组件的methods函数
+methods: {
+    // 将add和addN方法映射为methods中的函数，拱当前组件使用。
+    ...mapMutations({'add', 'addN'}),
+    handleAdd() {
+        this.add();
+    },
+    handleAddN(n) {
+        this.addN(n);
+    }
+    // 或者直接在标签元素中直接@click=add()
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>对于mutations来说，只能够实现同步操作，不可以执行异步操作的。</p> <h4 id="_2-3-action"><a href="#_2-3-action" class="header-anchor">#</a> 2.3 Action</h4> <p>从vuex官网中可以了解到，Action类似于mutation，不同之处在于：</p> <ul><li>Action 提交的是 mutation，而不是直接变更状态。</li> <li>Action 可以包含任意异步操作。</li></ul> <p>可以得出一个结论就是，如果通过异步操作变更数据，必须通过Action，而不能使用Mutation，但是在Action中还是要通过触发Mutation的方式间接变更数据。</p> <p><strong>如何定义Actions呢？</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {
+        add(state) {
+            //变更状态
+            state.count++;
+        },
+        addN(state, n) {
+            state.count += n;
+        }
+    },
+    actions: {
+        // 通过context去调用mutation
+        addAsync(context) {
+            setTimeout(() =&gt; {
+              context.commit('add'  
+            }, 1000)
+        },
+        // 调用Actions是也可以传入参数
+        addNAsync(context, n) {
+            setTimeout(() =&gt; {
+                context.commit('addN', n);
+            }, 1000);
+        }
+    }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>需要再次强调的是，只有通过mutation中定义的函数，才有权利去修改state中的数据，因此actions最终还是要调用mutation。</p> <p><strong>触发Actions的第一种方式</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>methods: {
+    handleAddAsync() {
+        this.$store.dispatch('addAsync');
+    },
+    handleAddNAsync() {
+        this.$store.dispatch('addNAsync', n);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p><strong>触发Actions的第二种方式</strong></p> <p>可以通过mapActions辅助函数的方式来触发Actions。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. 从vuex中按需导入mapActions函数
+import { mapActions } from 'vuex'
+
+...
+
+// 2. 将指定的actions函数，映射为当前组件的methos函数
+methods: {
+    ...mapActions(['addAsync', 'addNAsync'),
+    handleAddAsync() {
+        this.addAsync();
+    },
+    handleAddNAsync(n) {
+        this.addNAsync(n);
+    }
+}
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h4 id="_2-4-getter"><a href="#_2-4-getter" class="header-anchor">#</a> 2.4 Getter</h4> <p>在Vuex官网中，用到了派生这一词来介绍Getter，在这里可以理解为就是用于对Store中的数据进行加工处理，形成新的数据，类似Vue的计算属性。Getter的数据是基于Store中的数据的，所以当Store中数据发生变化时，Getter中的数据也会随之变化。</p> <p><strong>定义Getter</strong></p> <p>例如state中存有todos计划项，其对象有一个done状态表示完成与否。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const store = new Vuex.Store({
+  state: {
+    todos: [
+      { id: 1, text: '...', done: true },
+      { id: 2, text: '...', done: false }
+    ]
+  },
+  getters: {
+    // 这里通过getters定义的doneTodos方法来过滤已完成的todo项
+    doneTodos: state =&gt; {
+      return state.todos.filter(todo =&gt; todo.done);
+    },
+    // 这里还可以通过传入getters对象来获取其他方法
+    doneTodosCount: (state, getters) =&gt; {
+        return getters.doneTools.length;
+    },
+    // 传入参数
+    getTodoById: (state) =&gt; (id) =&gt; {
+        return state.todos.find(todo =&gt; todo.id == id);
+    }
+  }
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p><strong>触发Getter定义函数的第一种方法</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>this.$store.getters.doneTodos // -&gt; [{id: 1, text: '...', done: true}]
+this.$store.getters.doneTodosCount // -&gt; 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>触发Getter定义函数的第二种方法</strong></p> <p>通过mapGetters来触发Getter中定义的函数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 1. 导入mapGetters辅助函数
+import { mapGetters } from 'vuex'
+
+...
+
+// 2. 将制定的Getters函数映射为当前组件的函数
+methods: {
+    ...mapGetters(['doneTodos', 'doneTodosCount']),
+    handleDoneTodos() {
+        this.doneTodos();
+    }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h4 id="_2-5-module"><a href="#_2-5-module" class="header-anchor">#</a> 2.5 Module</h4> <p>当Store中存放了非常多非常大的共享数据对象时，应用会变的非常的复杂，Store对象也会非常臃肿，所以Vuex提供了一个Module模块来分隔Store。通过对Vuex中的Store分隔，分隔成一个一个的Module模块，每个Module模块都拥有自己的state、mutation、actions和getters。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const moduleA = {
+  state: () =&gt; ({ ... }),
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
+
+const moduleB = {
+  state: () =&gt; ({ ... }),
+  mutations: { ... },
+  actions: { ... }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
+})
+
+store.state.a // -&gt; moduleA 的状态
+store.state.b // -&gt; moduleB 的状态
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p><strong>对于模块中的mutations和getters，传入的第一个参数规定为state，而actions则依旧是context参数。如下：</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>const moduleA = {
+  state: {
+     count: 0
+  },
+  mutations: {
+    increment (state) {
+      // 这里的 `state` 对象是模块的局部状态
+      state.count++
+    }
+  },
+
+  getters: {
+    doubleCount (state) {
+      return state.count * 2
+    }
+  },
+  actions: {
+  	// context对象其实包含了 state、commit、rootState。
+  	incrementIfOddRootsum (context) {
+		if ((context.state.count + context.rootState.count) % 2 === 1) {
+        // 调用mutations
+        commit('increment')
+      }
+  	}
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p><strong>在module中通过mapState、mapGetters、mapActions和mapMutations等辅助函数来绑定要触发的函数</strong></p> <p>==第一种方式==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>methods: {
+	...mapActions([
+		'some/nested/module/foo',
+		'some/nested/module/bar'
+	])
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>在vuex中，可以为导入的state、getters、actions以及mutations命名别名，，这样可以方便调用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>methods: {
+	...mapActions([
+		'foo': 'some/nested/module/foo',
+		'bar': 'some/nested/module/bar'
+	])
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>==第二种方式==
+对于这种情况，你可以将模块的空间名称字符串作为第一个参数传递给上述函数，这样所有绑定都会自动将该模块作为上下文。于是上面的例子可以简化为：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>methods: {
+  ...mapActions('some/nested/module', [
+    'foo', // -&gt; this.foo()
+    'bar' // -&gt; this.bar()
+  ])
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>==第三种方式==
+可以通过使用 createNamespacedHelpers 创建基于某个命名空间辅助函数。它返回一个对象，对象里有新的绑定在给定命名空间值上的组件绑定辅助函数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import { createNamespacedHelpers } from 'vuex'
+
+const { mapState, mapActions } = createNamespacedHelpers('some/nested/module')
+
+export default {
+  methods: {
+    // 在 `some/nested/module` 中查找
+    ...mapActions([
+      'foo',
+      'bar'
+    ])
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>通过视频学习到Vuex基础知识后，再去Vuex的官方文档，阅读起来也不会那么的吃力了。</p> <p>本文以自己能理解的方式详细介绍了Vuex的概念以及核心知识点，下面再总结一下：</p> <ol><li>Vuex主要用于管理Vue组件中共享的数据。</li> <li>Vuex中有state、mutation、action、getter等核心概念。</li> <li>获取state可以通过this.$store.state.xx或者是通过定义mapState来获取。</li> <li>修改state中的变量需要通过mutation函数实现，而mutation的触发由两种方式，一种是通过this.$store.commit()函数，另外一种就是通过mapMutations来实现。</li> <li>mutation只能用于修改数据，而Actions可以实现异步操作。</li> <li>通过Actions的异步操作+mutation的修改数据，可以实现异步修改数据。调用Actions有两种方式，第一种是通过this.$store.dispatch来调用，另外一种方式是通过mapActions来调用。</li> <li>Getters函数用于对Store中数据进行加工，不会修改原本Store中的数据；Getters中的数据会受Store中数据进行影响。</li></ol> <h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <ul><li><a href="https://www.bilibili.com/video/BV1h7411N7bg?p=1" target="_blank" rel="noopener noreferrer">《Vuex从入门到实战》<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">Vuex官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <div id="boxx" data-v-e16ac808><div data-v-e16ac808><p v-if="true" class="custom-block-title" data-v-e16ac808></p> <p v-if="true" data-v-e16ac808></p></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <div class="article-list" data-v-2af88190><div class="article-title" data-v-2af88190><a href="/javaDocs/timeline/" class="iconfont icon-shizhong" data-v-2af88190>最近更新</a></div> <div class="article-wrapper" data-v-2af88190><dl data-v-2af88190><dd data-v-2af88190>01</dd> <dt data-v-2af88190><a href="/javaDocs/views/redis/Redis%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%B7%A5%E4%BD%9C%E5%87%86%E5%A4%87.html" data-v-2af88190><div data-v-2af88190>Redis源码阅读工作准备</div></a> <span data-v-2af88190>09-10</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>02</dd> <dt data-v-2af88190><a href="/javaDocs/views/rocketMQ/%5B%E6%80%BB%E6%B1%87%5DRocketMQ%E4%BC%98%E7%A7%80%E5%8D%9A%E6%96%87.html" data-v-2af88190><div data-v-2af88190>【总汇】RocketMQ优秀博文</div></a> <span data-v-2af88190>08-10</span></dt></dl><dl data-v-2af88190><dd data-v-2af88190>03</dd> <dt data-v-2af88190><a href="/javaDocs/views/rocketMQ/RocketMQ%E5%8F%8C%E5%8D%81%E4%B8%80%E5%AE%9E%E6%88%98.html" data-v-2af88190><div data-v-2af88190>RocketMQ双十一实战</div></a> <span data-v-2af88190>08-07</span></dt></dl></div> <div data-v-2af88190><a href="/javaDocs/timeline/" class="article-more" data-v-2af88190>更多文章 &gt;</a></div></div></main> <!----> <div class="comments-wrapper" style="display:none;" data-v-584a622c><!----></div></div></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-a81d141e data-v-a81d141e><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a81d141e><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a81d141e></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a81d141e></path></svg></div><!----><div data-v-3338c3f8><div class="DetailsOpenFlag" style="right:1rem;bottom:9rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;font-size:14px;font-weight:500;display:none;" data-v-3338c3f8>
+ 展开
+
+</div></div><!----></div></div>
+    <script src="/javaDocs/assets/js/app.87118588.js" defer></script><script src="/javaDocs/assets/js/5.ce38acb5.js" defer></script><script src="/javaDocs/assets/js/1.e99f6fa9.js" defer></script><script src="/javaDocs/assets/js/2.7e97c293.js" defer></script><script src="/javaDocs/assets/js/85.d522eec5.js" defer></script><script src="/javaDocs/assets/js/19.93b2bff0.js" defer></script>
+  </body>
+</html>
